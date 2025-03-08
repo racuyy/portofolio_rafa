@@ -1,0 +1,140 @@
+:root {
+    --warna-utama: #1E293B;
+    --warna-kedua: #94A3B8;
+    --warna-teks: #F8FAFC;
+}
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+header {
+    background-color: rgba(21, 21, 21, 0.178);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    color: var(--warna-teks);
+    font-size: 1.8rem;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  header nav ul li a {
+    color: var(--warna-teks);
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;
+  }
+  
+  header nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: var(--warna-teks);
+    transition: width 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    color: var(--warna-kedua);
+  }
+  
+  header nav ul li a:hover::after {
+    width: 100%;
+  }
+
+.hero {
+    background-color: var(--warna-utama);
+    height: 250px;
+    color: var(--warna-teks);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.section {
+    padding: 50px 20px;
+}
+.bg-light {
+    background-color: var(--warna-kedua);
+}
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+.image-gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-image {
+  transition: transform 0.3s;
+}
+
+.main-image:hover {
+  transform: rotate(15deg);
+}
+@media (max-width: 768px) {
+    .image-gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+  footer {
+    background-color: var(--warna-kedua);
+    color: var(--warna-teks);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .footer-port {
+    margin-top: 25em;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .footer-section {
+    min-width: 200px;
+  }
+  .social-icons a {
+    color: var(--warna-utama);
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  .footer-bottom {
+    margin-top: 10px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }

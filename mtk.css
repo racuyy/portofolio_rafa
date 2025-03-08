@@ -1,0 +1,70 @@
+:root {
+    --warna-utama: #1E293B;
+    --warna-kedua: #334155;
+    --warna-teks: #F8FAFC;
+    --warna-aksen: #64748B;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    color: var(--warna-teks);
+} 
+
+header h1 {
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+    color: var(--warna-teks);
+}
+
+a {
+    text-decoration: none;
+    color: var(--warna-teks);
+}
+.kontainer {
+    max-width: 90%;
+    width: 400px;
+    background: var(--warna-kedua);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+h2, h4 {
+    color: var(--warna-teks);
+    margin-bottom: 10px;
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-custom {
+    background-color: var(--warna-aksen);
+    border: none;
+    color: var(--warna-teks);
+    flex: 1;
+    min-width: 140px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+    background-color: var(--warna-teks);
+    color: var(--warna-utama);
+}
+
+footer {
+    margin-top: 15em;
+}

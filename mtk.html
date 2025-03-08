@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Deret</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="mtk.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Rafa.</h1>
+        <h2>Kalkulator Deret dan Geometri</h2>
+        <nav>
+            <ul>
+                <li><a href="portofolio.html">Kembali</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="kontainer">
+        <h2>Kalkulator Deret</h2>
+        
+        <!-- Pilihan Menu -->
+        <section class="btn-container">
+            <button class="btn btn-custom" onclick="tampilkanMenu('aritmatika')">Deret Aritmatika</button>
+            <button class="btn btn-custom" onclick="tampilkanMenu('geometri')">Deret Geometri</button>
+            <button class="btn btn-custom" onclick="tampilkanMenu('takHingga')">Deret Geometri Tak Hingga</button>
+            <button class="btn btn-custom" onclick="tampilkanKalkulator()">Kalkulator Sederhana</button>
+        </section>
+        
+        <!-- Submenu -->
+        <section id="submenu" class="d-none mt-3">
+            <h4 id="judul-submenu"></h4>
+            <div class="btn-container">
+                <button class="btn btn-custom" onclick="tampilkanForm('a')">Hitung Nilai a</button>
+                <button class="btn btn-custom" onclick="tampilkanForm('br')">Hitung Nilai b/r</button>
+                <button class="btn btn-custom" onclick="tampilkanForm('un')">Hitung Suku ke-n (Un)</button>
+                <button class="btn btn-custom" onclick="tampilkanForm('sn')">Hitung Jumlah n Suku (Sn)</button>
+            </div>
+        </section>
+        
+        <!-- Form input -->
+        <section id="form-container" class="d-none mt-3">
+            <h4 id="judul-form"></h4>
+            <div id="inputan" class="mb-2"></div>
+            <button class="btn btn-custom" onclick="hitung()">Hitung</button>
+            <p id="hasil"></p>
+        </section>
+
+        <!-- Kalkulator Sederhana -->
+        <section id="kalkulator" class="d-none mt-3">
+            <h4>Kalkulator Sederhana</h4>
+            <input type="number" id="angka1" class="form-control mb-2" placeholder="Masukkan angka pertama">
+            <input type="number" id="angka2" class="form-control mb-2" placeholder="Masukkan angka kedua">
+            <select id="operator" class="form-control mb-2">
+                <option value="+">Tambah (+)</option>
+                <option value="-">Kurang (-)</option>
+                <option value="*">Kali (×)</option>
+                <option value="/">Bagi (÷)</option>
+            </select>
+            <button class="btn btn-custom" onclick="hitungKalkulator()">Hitung</button>
+            <p id="hasil-kalkulator"></p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 style="font-weight: bold;">Rafa Portofolio</h3>
+                <p>Seorang Programmer Pemula</p>
+            </div>
+            <div class="footer-section">
+                <h3 style="font-weight: bold;">Media Sosial Saya</h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/rafa-hafiz-iqbal-sugarda-04010a32b/"><box-icon type='logo' name='linkedin'></box-icon></a>
+                    <a href="https://www.tiktok.com/@rafa_sukatempe?is_from_webapp=1&sender_device=pc"><box-icon type='logo' name='tiktok'></box-icon></a>
+                    <a href="https://www.instagram.com/rapaa_cuy/"><box-icon type='logo' name='instagram'></box-icon></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2024 Website dibuat oleh rafa dan dilindungi hak cipta</div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
